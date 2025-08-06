@@ -48,6 +48,34 @@ public class StringAllMethods {
 
         // T - Transform (toUpperCase, toLowerCase, valueOf, toCharArray)
 
+        System.out.println(company.toUpperCase()); // BIRLASOFT LIMITED
+
+        String myname = "CHANDU";
+        System.out.println(myname.toLowerCase()); // chandu
+
+        Integer i = 10;
+        System.out.println(String.valueOf(i)); // "10"
+
+        String sts = null;
+      //  System.out.println(sts.toString()); // NullPointerException
+        System.out.println(String.valueOf(sts));  // "null"
+
+        String country = "India is my contry.";
+        char[] array = country.toCharArray();
+        System.out.println(array); // India is my contry.
+        System.out.println(array[0]); // I
+        System.out.println(array.length); //19
+
+//        E - Equality (equals, equalsIgnoreCase, compareTo, compareToIgnoreCase)
+
+        String name1 = "chandra";
+        System.out.println(name1.equals("chandra")); // true
+
+        System.out.println(name1.equalsIgnoreCase("CHanDrA")); // true
+
+        System.out.println(name1.compareTo("chandra")); // 0 (0 means equal -ve means str1 < str2 and +ve means str1 > str2)
+
+        System.out.println(name1.compareToIgnoreCase("CHANDRA")); // 0
 
     }
 }
