@@ -1,5 +1,7 @@
 package com.jarvis.java8.Features.stringMethods;
 
+import java.util.List;
+
 public class StringAllMethods {
 
     public static void main(String[] args) {
@@ -19,7 +21,7 @@ public class StringAllMethods {
 
         System.out.println(trick);
 
-//        C - Check (isEmpty, isBlack, startWith, endWith, matches, contains)
+//      C - Check (isEmpty, isBlack, startWith, endWith, matches, contains)
 
         String company = " Birlasoft limited ";
 
@@ -46,7 +48,7 @@ public class StringAllMethods {
         System.out.println(email2.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,6}$")); // false because of curly
 
 
-        // T - Transform (toUpperCase, toLowerCase, valueOf, toCharArray)
+//      T - Transform (toUpperCase, toLowerCase, valueOf, toCharArray)
 
         System.out.println(company.toUpperCase()); // BIRLASOFT LIMITED
 
@@ -66,7 +68,7 @@ public class StringAllMethods {
         System.out.println(array[0]); // I
         System.out.println(array.length); //19
 
-//        E - Equality (equals, equalsIgnoreCase, compareTo, compareToIgnoreCase)
+//      E - Equality (equals, equalsIgnoreCase, compareTo, compareToIgnoreCase)
 
         String name1 = "chandra";
         System.out.println(name1.equals("chandra")); // true
@@ -76,6 +78,45 @@ public class StringAllMethods {
         System.out.println(name1.compareTo("chandra")); // 0 (0 means equal -ve means str1 < str2 and +ve means str1 > str2)
 
         System.out.println(name1.compareToIgnoreCase("CHANDRA")); // 0
+
+//      R - Replace (replace, replaceAll, replaceFirst)
+
+        String rep = "java coder. java is open source";
+
+        System.out.println(rep.replace("java","java programer")); // java programer
+
+        String sout = "a1b2c3";  // use regex It replaces all substrings that match a regular expression.
+        System.out.println(sout.replaceAll("[0-9]", "*"));  // a*b*c*
+
+        System.out.println(rep.replaceFirst("java","Java")); // Java coder. java is open source
+
+//      M - Modify (Trim/Split/Join/repeat)
+
+        String str = " chandu pande    ";
+        System.out.println(str.trim()); // remove space from beginning and end
+
+        String[] arr = str.split(" "); // break string to array " " by space
+        System.out.println(arr[2]);
+
+        List<String> list = List.of("Java", "Spring", "SQL");
+        String result = String.join(" | ", list);
+        System.out.println(result);  // Java | Spring | SQL
+
+        String repe = "Hi ";
+        System.out.println(repe.repeat(3));  // Hi Hi Hi
+
+//      S - Substring (substring)
+
+        String sub = "chandra don";
+        System.out.println(sub.substring(1,4)); //han
+
+//      F - Find (indexOf,lastIndexOf,charAt,codePointAt)
+
+        System.out.println(sub.indexOf("a")); // 2
+        System.out.println(sub.lastIndexOf("a")); // 6
+        System.out.println(sub.charAt(2)); // a
+        System.out.println(sub.codePointAt(1)); // 104 unic code
+
 
     }
 }
