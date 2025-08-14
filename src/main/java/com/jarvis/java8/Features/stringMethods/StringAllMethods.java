@@ -8,15 +8,17 @@ public class StringAllMethods {
         System.out.println("C-Terms F");
 
         String trick = """
-                C - Check
                 
-                T - Transform
-                E - Equality
-                R - Replace
-                M - Modify (Trim/Split/Join)
-                S - Substring
+                C - Check (isEmpty, isBlack, startWith, endWith, matches, contains)
                 
-                F - Find
+                T - Transform (toUpperCase, toLowerCase, valueOf, toCharArray)
+                E - Equality (equals, equalsIgnoreCase, compareTo, compareToIgnoreCase)
+                R - Replace (replace, replaceAll, replaceFirst)
+                M - Modify (Trim/Split/Join/repeat)
+                S - Substring (substring)
+                
+                F - Find (indexOf,lastIndexOf,charAt,codePointAt)
+                
                 """;
 
         System.out.println(trick);
@@ -116,6 +118,27 @@ public class StringAllMethods {
         System.out.println(sub.lastIndexOf("a")); // 6
         System.out.println(sub.charAt(2)); // a
         System.out.println(sub.codePointAt(1)); // 104 unic code
+
+
+//  ====================================================================================
+
+//        intern()  -  It check identical string is present in string pool if yes it return that refrence if not then it will add that string into the pool.
+
+        String interStr = new String("Birlasoft");
+        String interStr2 = "Birlasoft";
+
+/*        case 1
+        interStr present in heap and interStr2 is form pool thats why false*/
+
+        System.out.println(interStr==interStr2); // false
+
+/*        case 2
+        interStr.intern() returns the string from the pool.  both are have save object ref that why true*/
+
+        System.out.println(interStr.intern()==interStr2); // true
+
+
+
 
 
     }
