@@ -18,6 +18,8 @@ public class StringAllMethods {
                 S - Substring (substring)
                 
                 F - Find (indexOf,lastIndexOf,charAt,codePointAt)
+
+                intern()
                 
                 """;
 
