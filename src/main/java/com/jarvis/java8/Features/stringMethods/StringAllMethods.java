@@ -23,9 +23,9 @@ public class StringAllMethods {
                 
                 """;
 
-        System.out.println(trick);
-
 //      C - Check (isEmpty, isBlack, startWith, endWith, matches, contains)
+
+        System.out.println("C - Check (isEmpty, isBlack, startWith, endWith, matches, contains)");
 
         String company = " Birlasoft limited ";
         System.out.println(company.concat("chutya company"));
@@ -55,6 +55,8 @@ public class StringAllMethods {
 
 //      T - Transform (toUpperCase, toLowerCase, valueOf, toCharArray)
 
+        System.out.println("T - Transform (toUpperCase, toLowerCase, valueOf, toCharArray)");
+
         System.out.println(company.toUpperCase()); // BIRLASOFT LIMITED
 
         String myname = "CHANDU";
@@ -75,6 +77,8 @@ public class StringAllMethods {
 
 //      E - Equality (equals, equalsIgnoreCase, compareTo, compareToIgnoreCase)
 
+        System.out.println("Equality (equals, equalsIgnoreCase, compareTo, compareToIgnoreCase)");
+
         String name1 = "chandra";
         System.out.println(name1.equals("chandra")); // true
 
@@ -86,6 +90,8 @@ public class StringAllMethods {
 
 //      R - Replace (replace, replaceAll, replaceFirst)
 
+        System.out.println("Replace (replace, replaceAll, replaceFirst)");
+
         String rep = "java coder. java is open source";
 
         System.out.println(rep.replace("java","java programer")); // java programer
@@ -96,6 +102,8 @@ public class StringAllMethods {
         System.out.println(rep.replaceFirst("java","Java")); // Java coder. java is open source
 
 //      M - Modify (Trim/Split/Join/repeat)
+
+        System.out.println("Modify (Trim/Split/Join/repeat)");
 
         String str = " chandu pande    ";
         System.out.println(str.trim()); // remove space from beginning and end
@@ -112,11 +120,14 @@ public class StringAllMethods {
 
 //      S - Substring (substring)
 
+        System.out.println("Substring (substring)");
+
         String sub = "chandra don";
         System.out.println(sub.substring(1,4)); //han
 
 //      F - Find (indexOf,lastIndexOf,charAt,codePointAt)
 
+        System.out.println("Find (indexOf,lastIndexOf,charAt,codePointAt)");
         System.out.println(sub.indexOf("a")); // 2
         System.out.println(sub.lastIndexOf("a")); // 6
         System.out.println(sub.charAt(2)); // a
