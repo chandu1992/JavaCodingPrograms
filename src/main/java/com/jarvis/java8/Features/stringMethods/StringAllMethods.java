@@ -168,7 +168,7 @@ public class StringAllMethods {
 
 //  ====================================================================================
 
-//        intern()  -  It check identical string is present in string pool if yes it return that refrence if not then it will add that string into the pool.
+// 1.       intern()  -  It check identical string is present in string pool if yes it return that refrence if not then it will add that string into the pool.
 
         String interStr = new String("Birlasoft");
         String interStr2 = "Birlasoft";
@@ -184,8 +184,39 @@ public class StringAllMethods {
         System.out.println(interStr.intern()==interStr2); // true
 
 
+// 2.     indent() : indent() is handy when formatting multi-line strings (like logs, JSON, or printing structured text)
+
+        String json = "{\n\"id\":1,\n\"name\":\"Chandra\"\n}";
+        System.out.println("Response:\n" + json.indent(2));
+
+      /*  o/p is
+        Response:
+            {
+                "id":1,
+                "name":"Chandra"
+            }     */
 
 
+// 3.       lines() : separated by line terminators
+        String text = "Hello\nWorld\nJava";
+        text.lines().forEach(System.out::println);
+        /*  o/p:
+                Hello
+                World
+                Java     */
 
+        String text1 = "apple\nbanana\ncherry";
+
+        text1.lines() // directly gives Stream<String>
+                .map(String::toUpperCase)
+                .forEach(System.out::println);
+
+        /*  o/p:
+                APPLE
+                BANANA
+                CHERRY     */
+
+
+//        length() , concat(String str)
     }
 }
