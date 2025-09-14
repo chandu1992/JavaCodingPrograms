@@ -28,6 +28,7 @@ public class StringAllMethods {
 //      C - Check (isEmpty, isBlack, startWith, endWith, matches, contains)
 
         String company = " Birlasoft limited ";
+        System.out.println(company.concat("chutya company"));
 
         System.out.println(company.isEmpty()); // false
         System.out.println(company.isBlank()); // false
