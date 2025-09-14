@@ -23,7 +23,14 @@ public class StringAllMethods {
                 
                 """;
 
-//      C - Check (isEmpty, isBlack, startWith, endWith, matches, contains)
+//      C - Check (isEmpty, isBlank, startWith, endWith, matches, contains)
+
+       /* isEmpty() - if string is empty returns true. if string contain space then it return false because it not empty.
+        isBlank() - it return true is string is blank. menas not any character, space, special char ...
+        startWith() - it check string is start with we pass argument.
+        endWith()  - it check string end with we pass character.
+        matches() - it accept the regex pattern like emailid ,phone no which is required to matche to what in string.
+        contains() - it check string contain what we pass to this function.  */
 
         System.out.println("C - Check (isEmpty, isBlack, startWith, endWith, matches, contains)");
 
@@ -55,6 +62,12 @@ public class StringAllMethods {
 
 //      T - Transform (toUpperCase, toLowerCase, valueOf, toCharArray)
 
+        /*toUpperCase() - convert string to upper case.
+        toLowerCase() - convert String to Lowe case
+        valueOf () - convert to string. if string contains null it convert to "null"
+        toString () - convert primitive or object to String
+        toCharArray() -  to convert string into char[] . */
+
         System.out.println("T - Transform (toUpperCase, toLowerCase, valueOf, toCharArray)");
 
         System.out.println(company.toUpperCase()); // BIRLASOFT LIMITED
@@ -77,6 +90,11 @@ public class StringAllMethods {
 
 //      E - Equality (equals, equalsIgnoreCase, compareTo, compareToIgnoreCase)
 
+    /*    equals() - it return true if two strings are equal
+        equalsIngnorCase() - it return true in two string are equal where capital or small letters not matters
+        compareTo() - it return 0 means string are equal. -ve if str1 < str2 and +ve str1 > str2
+        comapreToIgnorCase() - sam as compareTo() but small and capital letter not matters  */
+
         System.out.println("Equality (equals, equalsIgnoreCase, compareTo, compareToIgnoreCase)");
 
         String name1 = "chandra";
@@ -90,6 +108,10 @@ public class StringAllMethods {
 
 //      R - Replace (replace, replaceAll, replaceFirst)
 
+        /*replace() - it replace all string whith what we pass.
+        replaceAll() - it req regex input with what we need to replace that argument.
+        replaceFirst() - it replace only fist match is found      */
+
         System.out.println("Replace (replace, replaceAll, replaceFirst)");
 
         String rep = "java coder. java is open source";
@@ -102,6 +124,11 @@ public class StringAllMethods {
         System.out.println(rep.replaceFirst("java","Java")); // Java coder. java is open source
 
 //      M - Modify (Trim/Split/Join/repeat)
+
+      /*  trim() - trim remove trail and end spaces form string
+        split() - it can split the stirng by space and same it to String []
+        join() - join the array of string seperate by - , space
+        repeate() - it repeat the string many time which i want */
 
         System.out.println("Modify (Trim/Split/Join/repeat)");
 
@@ -118,7 +145,7 @@ public class StringAllMethods {
         String repe = "Hi ";
         System.out.println(repe.repeat(3));  // Hi Hi Hi
 
-//      S - Substring (substring)
+//      S - Substring (substring) - it return the some part of string we need to pass index(1,4)
 
         System.out.println("Substring (substring)");
 
@@ -126,6 +153,11 @@ public class StringAllMethods {
         System.out.println(sub.substring(1,4)); //han
 
 //      F - Find (indexOf,lastIndexOf,charAt,codePointAt)
+
+     /*   indexOf() - it return the index of char
+        lastIndexOf() - it return last index of what we pass to it
+        charAt() - return the char form the index
+        codePointAt() - Unicode code point (an integer) of the character at the given index in the string.*/
 
         System.out.println("Find (indexOf,lastIndexOf,charAt,codePointAt)");
         System.out.println(sub.indexOf("a")); // 2
