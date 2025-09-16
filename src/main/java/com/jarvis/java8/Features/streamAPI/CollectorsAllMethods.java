@@ -19,11 +19,17 @@ public class CollectorsAllMethods {
         System.out.println(setData); // [80, 66, 20, 100, 40, 60, 46]
 
         // calculate average of list
-        Double sum = data.stream().collect(Collectors.averagingInt(num -> num));
-        System.out.println(sum); // 29.428571428571427
+        Double average = data.stream().collect(Collectors.averagingInt(num -> num));
+        System.out.println(average); // 29.428571428571427
 
+        //counting the all element in list
         List<String> names = Arrays.asList("A", "B", "C", "D");
         Long count = names.stream().collect(Collectors.counting());
         System.out.println(count); // 4
+
+//        summing the element
+        List<Integer> needSum = Arrays.asList(10,20,30,40,50,33,23);
+        long sum = needSum.stream().collect(Collectors.summingLong(a -> a));
+        System.out.println(sum); // 206
     }
 }
