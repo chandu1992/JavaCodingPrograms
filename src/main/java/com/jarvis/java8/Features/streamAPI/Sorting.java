@@ -10,10 +10,13 @@ public class Sorting {
     public static void main(String[] args) {
 
         Stream<Integer> str = Stream.of(10,21,1,23,43,2,3,13);
+        Stream<Integer> str5 = Stream.of(10,21,1,23,43,2,3,13);
 
 //        Assending order small to big
         List<Integer> sortAsc =  str.sorted().collect(Collectors.toList());
         System.out.println(sortAsc); // [1, 2, 3, 10, 13, 21, 23, 43]
+
+        str5.sorted().skip(1).limit(1).forEach(System.out::print);
 
 //        decending order
         Stream<Integer> str1 = Stream.of(10,21,1,23,43,2,3,13);
