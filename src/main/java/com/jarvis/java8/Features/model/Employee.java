@@ -58,4 +58,16 @@ public class Employee {
     public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeId=" + employeeId +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", department='" + department + '\'' +
+                ", salary=" + salary +
+                ", addresses=" + addresses +
+                '}';
+    }
 }

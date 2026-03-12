@@ -71,5 +71,24 @@ public class OptionalService {
         if(optData.isPresent()){     // isPresent() return true if data present
             System.out.println("data is present");
         }
+
+
+        List<Employee> empdatatest = employeeService.getEmployeesContainSomeNull();
+        Optional<List<Employee>> testdata = Optional.ofNullable(empdatatest);
+
+        //if getSalary salary=500000 it returns 500000. if salary is null then return 0
+        //if null found what we give in orElse block it will execute
+        testdata.ifPresent(empObj->{
+            System.out.println(Optional.ofNullable(empObj.get(2).getSalary()).orElse(0));
+        });
+
+        testdata.ifPresent(empObj->{
+            System.out.println(Optional.ofNullable(empObj.get(2).getSalary()).orElseGet(()->0));
+        });
+
+        Employee emp = testdata.get().get(1);
+        System.out.println(emp);
+
+
     }
 }
