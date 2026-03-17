@@ -90,5 +90,10 @@ public class OptionalService {
         System.out.println(emp);
 
 
+       Optional<List<Employee>> e= testdata.stream().findFirst();
+
+       e.ifPresent(emp1 ->{
+           System.out.println(emp1.size());
+       });
     }
 }
