@@ -68,7 +68,8 @@ public class Sorting {
 
         Arrays.stream(arr)
 //                .boxed() // convert to Integer object we can use mapToObj() also
-                .mapToObj(value -> Integer.valueOf(value))
+//                .mapToObj(value -> Integer.valueOf(value))
+                .mapToObj(Integer::valueOf)
                 .sorted((a,b)->a-b).forEach(System.out::println);
     }
 }
